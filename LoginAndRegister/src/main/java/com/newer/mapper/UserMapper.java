@@ -14,6 +14,9 @@ public interface UserMapper {
     User findByUserName(String userName);
 
     //根据用户名和密码查询(登录功能)
-    @Select("select * from  user where user_name=#{userName} adn user_pwd=#{pwd}")
+    @Select("select * from  user where user_name=#{userName} and password=#{pwd}")
     User findByUserNameAndpwd(@Param("userName") String userName, @Param("pwd") String pwd );
+
+    //添加一个用户(注册功能)
+    Integer addUser(User user);
 }

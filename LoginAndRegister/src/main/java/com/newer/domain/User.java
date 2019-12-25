@@ -7,18 +7,18 @@ package com.newer.domain;
  */
 public class User {
     //占时只有这些字段 后期根据功能在加
-    private  Integer uid; //用户id
+    private  Integer userId; //用户id
     private  String userName;//用户名
     private  String  password;//用户密码
     private  String email;//用户邮箱
     private  String   phone;//手机号码
 
-    public Integer getUid() {
-        return uid;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setUid(Integer uid) {
-        this.uid = uid;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getUserName() {
@@ -43,6 +43,17 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
     }
 
     public String getPhone() {
